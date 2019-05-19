@@ -96,6 +96,11 @@ def samples(sample):
     }
     return jsonify(data)
 
+# @app.route("/wfreq/<sample>")
+# def samples(sample):
+    
+#     # return jsonify(data)
+
 
 if __name__ == "__main__":
     app.run()
