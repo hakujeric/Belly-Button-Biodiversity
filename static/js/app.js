@@ -14,12 +14,13 @@ function buildMetadata(sample) {
     d3.json(metadataUrl).then(function (data) {
       Object.entries(data).forEach(([key, value]) => {
         metadataPanel.append("h6").text(`${key}: ${value}`);
-      })});
-  
-    // BONUS: Build the Gauge Chart
-    // buildGauge(data.WFREQ);
+        console.log(data.WFREQ);
+      });
+      // console.log(data.WFREQ);
+      buildGauge(data.WFREQ);
+    });
+  }
     
-}
 function buildCharts(sample) {
 
   // @TODO: Use `d3.json` to fetch the sample data for the plots

@@ -96,14 +96,6 @@ def samples(sample):
     }
     return jsonify(data)
 
-@app.route("/wfreq/<sample>")
-def sample_wfreq(sample):
-    """Return the wfreq for a given sample."""
-    
-    result = db.session.query(Samples_Metadata.WFREQ).filter(Samples_Metadata.sample == sample).all()
-    print(result)
-    
-    return jsonify(result)
 
 
 if __name__ == "__main__":
