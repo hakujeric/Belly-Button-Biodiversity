@@ -100,7 +100,7 @@ def samples(sample):
 def sample_wfreq(sample):
     """Return the wfreq for a given sample."""
     
-    result = db.session.query(Samples_Metadata.WFREQ).filter(Samples_Metadata.sample == sample)
+    result = db.session.query(Samples_Metadata.WFREQ).filter(Samples_Metadata.sample == sample).all()
     print(result)
     
     return jsonify(result)
